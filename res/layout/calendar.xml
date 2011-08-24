@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calendar_frame"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+	<TableLayout
+	    android:id="@+id/calendar_table"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:stretchColumns="*">
+		<TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+		    <TextView android:id="@+id/calendar_date"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_span="7"
+		        android:gravity="center"
+		        android:textSize="24px"
+		        android:textStyle="bold" 
+		        />
+		</TableRow>
+		<TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+		    <TextView android:id="@+id/tvSun" android:text="@string/sunday"    android:layout_height="wrap_content" android:gravity="center" android:textStyle="bold" />
+		    <TextView android:id="@+id/tvMon" android:text="@string/monday"    android:layout_height="wrap_content" android:gravity="center" android:textStyle="bold"/>
+		    <TextView android:id="@+id/tvTue" android:text="@string/tuesday"   android:layout_height="wrap_content" android:gravity="center" android:textStyle="bold" />
+		    <TextView android:id="@+id/tvWed" android:text="@string/wednesday" android:layout_height="wrap_content" android:gravity="center" android:textStyle="bold" />
+		    <TextView android:id="@+id/tvThu" android:text="@string/thursday"  android:layout_height="wrap_content" android:gravity="center" android:textStyle="bold" />
+		    <TextView android:id="@+id/tvFri" android:text="@string/friday"    android:layout_height="wrap_content" android:gravity="center" android:textStyle="bold" />
+		    <TextView android:id="@+id/tvSat" android:text="@string/saturday"  android:layout_height="wrap_content" android:gravity="center" android:textStyle="bold" />
+		</TableRow>
+	</TableLayout>
+    <LinearLayout 
+    	android:orientation="horizontal"
+    	android:layout_width="wrap_content" 
+    	android:layout_height="40dp" 
+    	>
+        <Button
+        	android:id="@+id/btnCalc"
+        	android:text="CALCULATE"
+        	android:layout_width="wrap_content"
+        	android:layout_height="fill_parent"
+			android:gravity="center" 
+			android:onClick="onClickCalc"
+    	    />
+        <Button
+        	android:id="@+id/btnPrice"
+        	android:text="Set Price"
+        	android:layout_width="wrap_content"
+        	android:layout_height="fill_parent"
+			android:onClick="onClickPrice"
+	        />
+    </LinearLayout>
+    
+    <LinearLayout 
+    	android:orientation="horizontal"
+    	android:layout_width="wrap_content" 
+    	android:layout_height="40dp" 
+    	>
+ 	    <TextView
+	    	android:text="period" 
+        	android:layout_width="wrap_content"
+	    	android:layout_height="fill_parent" 
+	    	android:gravity="center" 
+	    	android:textSize="20dp"/>
+	    <EditText
+	    	android:id="@+id/edFrom" 
+	    	android:text="8/25" 
+	    	android:layout_width="80dp" 
+	    	android:layout_height="fill_parent" android:singleLine="true"/>
+	    <TextView 
+	    	android:text=" - "      
+        	android:layout_width="wrap_content"
+	    	android:layout_height="fill_parent" 
+	    	android:gravity="center" 
+	    	android:textSize="20dp"/>
+	    <EditText 
+	    	android:id="@+id/edTo" 
+	    	android:text="4/27" 
+	    	android:layout_width="80dp" 
+	    	android:layout_height="fill_parent" android:singleLine="true"/>
+
+    </LinearLayout>
+     
+</LinearLayout>
+
